@@ -1,0 +1,5 @@
+<main class="section">
+    <h1>Admin</h1>
+    <button (click)="addPet=!addPet" type="button">{{ (addPet) ? 'Edit Pet' : 'Add Pet' }}</button>
+    <app-pet-form [mode]="addPet?'add':'edit'"></app-pet-form>
+</main>

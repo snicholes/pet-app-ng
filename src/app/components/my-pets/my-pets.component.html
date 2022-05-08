@@ -1,0 +1,11 @@
+<main class="section">
+    <h1>My Pets</h1>
+    <p id="messageBox"></p>
+    <div *ngIf="loggedInUser; else notLoggedIn">
+        <p *ngIf="!loggedInUser.pets || loggedInUser.pets.length===0">You don't have any pets! You should adopt some. :)</p>
+        <app-pet *ngFor="let eachPet of loggedInUser.pets" [pet]="eachPet"></app-pet>
+    </div>
+    <ng-template #notLoggedIn>
+        <p>You have to be logged in to view your pets!</p>
+    </ng-template>
+</main>

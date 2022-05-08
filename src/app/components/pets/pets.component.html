@@ -1,0 +1,16 @@
+<main class="section">
+    <h1>Available Pets</h1>
+    <p *ngIf="!loggedInUser">Log in to adopt pets!</p>
+    <div>
+        <label for="petSearch">Search Pets: </label>
+        <input [(ngModel)]="petSearchText" type="text" id="petSearch">
+    </div>
+    <div class="pets" *ngIf="pets && pets.length>0; else noPets">
+        <!-- the pet component has @Input pet field to allow us to pass each pet
+        into it. see the pet component for details -->
+        <app-pet *ngFor="let eachPet of pets | petSearch:petSearchText" [pet]="eachPet"></app-pet>
+    </div>
+    <ng-template #noPets>
+        <p>There are no pets available right now, check again later!</p>
+    </ng-template>
+</main>

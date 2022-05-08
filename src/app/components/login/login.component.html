@@ -1,0 +1,15 @@
+<ng-container *ngIf="!loggedInUser; else logout">
+    <div>
+        <label for="usernameInput">Username: </label>
+        <input [(ngModel)]="credentials.username" type="text" id="usernameInput">
+        <label for="passwordInput">Password: </label>
+        <input [(ngModel)]="credentials.password" type="password" id="passwordInput"> 
+        <button (click)="logIn()" type="button" id="logInBtn">Log In</button>
+    </div>
+</ng-container>
+<ng-template #logout>
+    <div>
+        {{ loggedInUser.firstName }}
+        <button (click)="logOut()" type="button" id="logOutBtn">Log Out</button>
+    </div>
+</ng-template>

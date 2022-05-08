@@ -1,0 +1,7 @@
+<div>
+    <!-- {{ dateExample | date:'shortDate' }} -->
+    <h2>{{ pet.name | uppercase }}</h2>
+    <h5>{{ pet.age }}-year-old {{ pet.species }}</h5>
+    <p>{{ pet.description }}</p>
+    <button *ngIf="pet.status.name==='Available' && loggedInUser" (click)="adopt()">Adopt</button>
+</div>

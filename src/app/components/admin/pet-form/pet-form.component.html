@@ -1,0 +1,20 @@
+<form>
+    <ng-container *ngIf="mode==='edit'">
+        <label for="petIdInput">ID: </label>
+        <input [(ngModel)]="pet.id" (ngModelChange)="retrievePet()" type="number" id="petIdInput" name="petIdInput">
+        <br>
+    </ng-container>
+    <label for="petNameInput">Name: </label>
+    <input [(ngModel)]="pet.name" type="text" id="petNameInput" name="petNameInput">
+    <br>
+    <label for="petSpeciesInput">Species: </label>
+    <input [(ngModel)]="pet.species" type="text" id="petSpeciesInput" name="petSpeciesInput">
+    <br>
+    <label for="petAgeInput">Age: </label>
+    <input [(ngModel)]="pet.age" type="number" id="petAgeInput" name="petAgeInput">
+    <br>
+    <label for="petDescriptionInput">Description: </label>
+    <input [(ngModel)]="pet.description" type="text" id="petDescriptionInput" name="petDescriptionInput">
+    <br>
+    <button (click)="submit()" type="button">Submit</button>
+</form>

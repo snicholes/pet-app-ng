@@ -1,0 +1,7 @@
+.pets {
+    display: grid;
+    grid-template: 
+    "div div div"
+    / 33% 33% 33%;
+    width: 100%;
+}

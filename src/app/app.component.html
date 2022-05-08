@@ -1,0 +1,9 @@
+<nav class="section">
+  <a routerLink="home">PetApp</a>
+  <span>🐾</span>
+  <a routerLink="pets">Available Pets</a>
+  <a routerLink="mypets" *ngIf="loggedInUser">My Pets</a>
+  <a routerLink="admin" *ngIf="loggedInUser?.role.name=='Employee'">Admin</a>
+  <app-login (loginOrLogout)="getLoggedInUser()"></app-login>
+</nav>
+<router-outlet></router-outlet>

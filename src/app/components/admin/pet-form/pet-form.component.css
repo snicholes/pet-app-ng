@@ -1,0 +1,9 @@
+form {
+    text-align: left;
+    width:25rem;
+    margin:auto;
+    display:grid;
+    grid-template:
+    "label input br"
+    / 30% 70% 0%;
+}

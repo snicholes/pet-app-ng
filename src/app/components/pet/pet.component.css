@@ -1,0 +1,11 @@
+div {
+    border:2px solid #cc8258;
+    border-radius:1rem;
+    margin:1rem;
+    padding:0rem 1rem 1rem 1rem;
+    background-color: #ffebce;
+}
+
+div:hover {
+    background-color: #efdbbe;
+}
