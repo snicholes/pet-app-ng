@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { Pet } from '../models/pet';
 import { User } from '../models/user';
 
@@ -9,7 +10,7 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class PetService {
-  url: string = 'http://localhost:8080/';
+  url: string = `${environment.url}`;
   headers = {'Content-type':'application/json'};
 
   // dependency injection: injecting HttpClient
